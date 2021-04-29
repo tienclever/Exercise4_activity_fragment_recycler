@@ -46,7 +46,7 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     internal fun start_Login() {
-        val intent = Intent(this, Login_activity::class.java)
+        val intent = Intent(this, EmailActivity::class.java)
         startActivity(intent)
     }
 
