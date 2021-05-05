@@ -46,7 +46,7 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     internal fun start_Login() {
-        val intent = Intent(this, EmailActivity::class.java)
+        val intent = Intent(this, Login_activity::class.java)
         startActivity(intent)
     }
 
@@ -58,8 +58,8 @@ class OnboardingActivity : AppCompatActivity() {
 
     fun showDialog(){
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-        builder.setTitle("Thoat app")
-        builder.setMessage("ban co muon thoat")
+        builder.setTitle("Thoát app")
+        builder.setMessage("bạn có muốn thóat")
         builder.setPositiveButton("OK",DialogInterface.OnClickListener { dialog, which ->
           super.onBackPressed()
         })
