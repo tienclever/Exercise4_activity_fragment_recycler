@@ -11,7 +11,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".EmailActivity"></activity>
         <activity android:name=".Confirm_Activity" />
-        <activity android:name=".Email_Activity" />
         <activity android:name=".Home_Activity" />
         <activity android:name=".Login_activity" />
         <activity
