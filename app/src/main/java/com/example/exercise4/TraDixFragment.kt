@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_home_.*
 import kotlinx.android.synthetic.main.layout_tradix.*
 
 class TraDixFragment : Fragment() {
@@ -40,7 +39,7 @@ class TraDixFragment : Fragment() {
         var adapter = AdapterHome(listTest)
         recycleview.adapter = adapter
         recycleview.layoutManager = LinearLayoutManager(this.context)
-        btnLoadMore.setVisibility(View.VISIBLE);
+        btnLoadMore.visibility = View.VISIBLE;
 
         //line
         val layoutManager = LinearLayoutManager(
@@ -79,4 +78,6 @@ class TraDixFragment : Fragment() {
             })
         itemTouchHelper.attachToRecyclerView(recycleview)
     }
+
+
 }

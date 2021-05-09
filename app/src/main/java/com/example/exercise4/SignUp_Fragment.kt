@@ -1,5 +1,6 @@
 package com.example.exercise4
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,10 +23,17 @@ class SignUp_Fragment : Fragment() {
 
         btn_signUp.setOnClickListener {
             (activity as Login_activity).popFragment()
+
+            var intent = Intent()
+            intent.putExtra("key1", et1.text)
+            intent.putExtra("key2", et2.text)
+            (activity as Login_activity).start_login()
+            (activity as Login_activity).popFragment()
         }
 
         txtforGotPasswork.setOnClickListener {
             (activity as Login_activity).start_Email()
+            (activity as Login_activity).popFragment()
         }
 
     }

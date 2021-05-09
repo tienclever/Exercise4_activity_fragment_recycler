@@ -20,7 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/et1"
+        android:id="@+id/etLogi1"
         android:layout_width="249dp"
         android:layout_height="51dp"
         android:layout_marginTop="23dp"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/et2"
+        android:id="@+id/etLogin2"
         android:layout_width="249dp"
         android:layout_height="51dp"
         android:layout_marginTop="16dp"
@@ -45,10 +45,10 @@
         android:paddingLeft="23dp"
         android:textColorHint="#9d9d9d"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/et1"
+        app:layout_constraintEnd_toEndOf="@+id/etLogi1"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/et1"
-        app:layout_constraintTop_toBottomOf="@+id/et1" />
+        app:layout_constraintStart_toStartOf="@+id/etLogi1"
+        app:layout_constraintTop_toBottomOf="@+id/etLogi1" />
 
     <Button
         android:id="@+id/btn_login"
@@ -59,9 +59,9 @@
         android:text="LOGIN"
         android:textColor="#ffffff"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/et2"
-        app:layout_constraintStart_toStartOf="@+id/et2"
-        app:layout_constraintTop_toBottomOf="@+id/et2" />
+        app:layout_constraintEnd_toEndOf="@+id/etLogin2"
+        app:layout_constraintStart_toStartOf="@+id/etLogin2"
+        app:layout_constraintTop_toBottomOf="@+id/etLogin2" />
 
     <TextView
         android:id="@+id/textView8"

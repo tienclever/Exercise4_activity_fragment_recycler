@@ -1,5 +1,6 @@
 package com.example.exercise4
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +22,10 @@ class Login_Fragment :Fragment() {
 
         txt_signUp.setOnClickListener {
             (activity as Login_activity).initFragment_signUp()
+        }
+
+        btn_login.setOnClickListener {
+            (activity as Login_activity).start_Home()
         }
     }
 }

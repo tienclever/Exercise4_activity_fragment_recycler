@@ -29,6 +29,10 @@ class Onboarding2 : Fragment() {
         btn_back_man2.setOnClickListener {
             (activity as OnboardingActivity).onClickPop()
         }
+
+        textView9.setOnClickListener {
+            (activity as OnboardingActivity).skip()
+        }
     }
 
 }

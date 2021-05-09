@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_bo_hong"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/bo_hong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:background="@drawable/icons_8_alarm"
+        app:layout_constraintBottom_toBottomOf="@+id/img_bo_hong"
+        app:layout_constraintEnd_toEndOf="@+id/img_bo_hong"
+        app:layout_constraintStart_toStartOf="@+id/img_bo_hong"
+        app:layout_constraintTop_toTopOf="@+id/img_bo_hong" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="monospace"
+        android:text="Alerts"
+        android:textColor="#454545"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img"
+        app:layout_constraintStart_toEndOf="@+id/img"
+        app:layout_constraintTop_toTopOf="@+id/img" />
+</androidx.constraintlayout.widget.ConstraintLayout>
