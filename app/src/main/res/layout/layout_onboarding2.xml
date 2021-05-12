@@ -104,9 +104,11 @@
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="52dp"
-                android:background="@drawable/ic_gruppo_di_maschere_3"
+                android:src="@drawable/ic_gruppo_di_maschere_3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />

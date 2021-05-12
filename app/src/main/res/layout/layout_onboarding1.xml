@@ -66,6 +66,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/imageView35"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="34dp"
@@ -81,8 +82,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="31dp"
+
                 android:adjustViewBounds="true"
-                android:background="@drawable/ic_gruppo_di_maschere_4"
+                android:src="@drawable/ic_gruppo_di_maschere_4"
+                android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -92,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="46dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="29dp"
                 android:fontFamily="monospace"
                 android:text="Start to invest"
                 android:textColor="#3e3e3e"

@@ -9,9 +9,9 @@ import androidx.core.graphics.drawable.DrawableCompat
 import kotlinx.android.synthetic.main.activity_home_.*
 
 
-class Home_Activity : AppCompatActivity() {
+class Home_Activity : AppCompatActivity(){
 
-    var number = 1
+    var number = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,6 @@ class Home_Activity : AppCompatActivity() {
         imageView11.visibility = View.VISIBLE;
 
         btnIncrease.setOnClickListener {
-            Delete()
             init_one_fragment()
             btnIncrease.setBackgroundResource(R.drawable.increase)
             imageView11.visibility = View.VISIBLE
@@ -32,9 +31,13 @@ class Home_Activity : AppCompatActivity() {
             imageView13.visibility = View.INVISIBLE
             btnCustomer.setBackgroundResource(R.drawable.icons_8_customer)
             imageView14.visibility = View.INVISIBLE
+            var buttonDrawable2: Drawable? = btnNew.background
+            buttonDrawable2?.setTint(Color.BLACK)
+            var buttonDrawable3: Drawable? = btnCustomer.background
+            buttonDrawable3?.setTint(Color.BLACK)
+
         }
         btnChart.setOnClickListener {
-//            Delete()
             init_two_fragment()
             btnIncrease.setBackgroundResource(R.drawable.icons_8_increase)
             imageView11.visibility = View.INVISIBLE
@@ -44,9 +47,13 @@ class Home_Activity : AppCompatActivity() {
             imageView13.visibility = View.INVISIBLE
             btnCustomer.setBackgroundResource(R.drawable.icons_8_customer)
             imageView14.visibility = View.INVISIBLE
+            var buttonDrawable2: Drawable? = btnNew.background
+            buttonDrawable2?.setTint(Color.BLACK)
+            var buttonDrawable3: Drawable? = btnCustomer.background
+            buttonDrawable3?.setTint(Color.BLACK)
+
         }
         btnNew.setOnClickListener {
-            Delete()
             init_three_fragment()
             btnIncrease.setBackgroundResource(R.drawable.icons_8_increase)
             imageView11.visibility = View.INVISIBLE
@@ -55,17 +62,19 @@ class Home_Activity : AppCompatActivity() {
             btnNew.setBackgroundResource(R.drawable.icons_8_news)
 
             //setTint
-//            var buttonDrawable1: Drawable? = btnNew.background
-//            buttonDrawable1 = DrawableCompat.wrap(buttonDrawable1!!)
-//            DrawableCompat.setTint(buttonDrawable1, Color.WHITE);
-//            btnNew.background = buttonDrawable1
+            var buttonDrawable1: Drawable? = btnNew.background
+            buttonDrawable1 = DrawableCompat.wrap(buttonDrawable1!!)
+            DrawableCompat.setTint(buttonDrawable1, Color.WHITE);
+            btnNew.background = buttonDrawable1
+
+            var buttonDrawable3: Drawable? = btnCustomer.background
+            buttonDrawable3?.setTint(Color.BLACK)
 
             imageView13.visibility = View.VISIBLE
             btnCustomer.setBackgroundResource(R.drawable.icons_8_customer)
             imageView14.visibility = View.INVISIBLE
         }
         btnCustomer.setOnClickListener {
-            Delete()
             init_four_fragment()
             btnIncrease.setBackgroundResource(R.drawable.icons_8_increase)
             imageView11.visibility = View.INVISIBLE
@@ -74,11 +83,14 @@ class Home_Activity : AppCompatActivity() {
             btnNew.setBackgroundResource(R.drawable.icons_8_news)
             imageView13.visibility = View.INVISIBLE
             btnCustomer.setBackgroundResource(R.drawable.icons_8_customer)
-//
-//            var buttonDrawable3: Drawable? = btnCustomer.background
-//            buttonDrawable3 = DrawableCompat.wrap(buttonDrawable3!!)
-//            DrawableCompat.setTint(buttonDrawable3, Color.WHITE);
-//            btnCustomer.background = buttonDrawable3
+
+            var buttonDrawable2: Drawable? = btnNew.background
+            buttonDrawable2?.setTint(Color.BLACK)
+
+            var buttonDrawable3: Drawable? = btnCustomer.background
+            buttonDrawable3 = DrawableCompat.wrap(buttonDrawable3!!)
+            DrawableCompat.setTint(buttonDrawable3, Color.WHITE);
+            btnCustomer.background = buttonDrawable3
 
             imageView14.visibility = View.VISIBLE
         }
@@ -88,6 +100,7 @@ class Home_Activity : AppCompatActivity() {
         val oneFragment = TraDixFragment()
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.addToBackStack("add1 ${number++}")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_layout, oneFragment)
     }
@@ -123,6 +136,36 @@ class Home_Activity : AppCompatActivity() {
     override fun onBackPressed() {
         finish()
         super.onBackPressed()
+    }
+
+    internal fun init() {
+        val oneFragment = Recycler_Fragment()
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.commit()
+        fragmentTransaction.replace(R.id.frame_test, oneFragment)
+    }
+    internal fun init2() {
+        val oneFragment = Fragment_Shares()
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.commit()
+        fragmentTransaction.replace(R.id.frame_test, oneFragment)
+    }
+
+    internal fun background(){
+        constraintLayout2.setBackgroundColor(Color.BLUE)
+    }
+
+    internal fun background2(){
+        constraintLayout2.setBackgroundColor(Color.WHITE)
+    }
+
+    internal fun initFrangmentRecyclerNew(){
+        val frangmentRecycler = Frangment_Recycleview_New()
+        val fragmentTransition = supportFragmentManager.beginTransaction()
+        fragmentTransition.replace(R.id.contener_news, frangmentRecycler)
+        fragmentTransition.commit()
     }
 
 }

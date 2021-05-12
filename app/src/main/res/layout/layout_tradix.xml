@@ -88,7 +88,7 @@
                     android:id="@+id/share"
                     android:layout_width="60dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="33dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginBottom="24dp"
                     android:background="@drawable/select_radio_button"
@@ -108,7 +108,7 @@
                     android:id="@+id/currencies"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
-                    android:layout_marginStart="33dp"
+                    android:layout_marginStart="21dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginBottom="24dp"
                     android:background="@drawable/select_radio_button"
@@ -125,7 +125,7 @@
                     android:id="@+id/futures"
                     android:layout_width="60dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="33dp"
+                    android:layout_marginStart="21dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginBottom="24dp"
                     android:background="@drawable/select_radio_button"
@@ -142,7 +142,7 @@
                     android:id="@+id/crypto"
                     android:layout_width="60dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="33dp"
+                    android:layout_marginStart="21dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginBottom="24dp"
                     android:background="@drawable/select_radio_button"
@@ -174,29 +174,38 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycleview"
+            <FrameLayout
+                android:id="@+id/frame_test"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginBottom="32dp"
-                app:layout_constraintBottom_toTopOf="@+id/btnLoadMore"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/btnLoadMore"
-                android:layout_width="120dp"
-                android:layout_height="34dp"
-                android:layout_marginBottom="75dp"
-                android:background="@drawable/load_more"
-                android:text="Load More"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:visibility="invisible"
+                android:layout_height="500dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recycleview"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginBottom="32dp"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/btnLoadMore"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnLoadMore"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="34dp"-->
+<!--                android:layout_marginBottom="75dp"-->
+<!--                android:background="@drawable/load_more"-->
+<!--                android:text="Load More"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:textSize="15sp"-->
+<!--                android:visibility="invisible"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -208,24 +217,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="49dp"
-            android:layout_height="49dp"
-            android:layout_marginEnd="34dp"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon_background"
             android:background="@drawable/chuong"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <ImageView
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:background="#ff00"
-            android:backgroundTint="@color/colorPrimary"
-            app:layout_constraintBottom_toBottomOf="@+id/button4"
-            app:layout_constraintEnd_toEndOf="@+id/button4"
-            app:layout_constraintStart_toStartOf="@+id/button4"
-            app:layout_constraintTop_toTopOf="@+id/button4" />
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/icons_8_alarm2"
+            android:layout_marginStart="101dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView33"
+            app:layout_constraintStart_toEndOf="@+id/textView24"
+            app:layout_constraintTop_toTopOf="@+id/textView24" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
