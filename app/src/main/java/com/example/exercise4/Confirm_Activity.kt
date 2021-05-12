@@ -11,7 +11,9 @@ class Confirm_Activity : AppCompatActivity() {
         setContentView(R.layout.activity_confirm_)
 
         btnChuyen.setOnClickListener {
-            var intent = Intent(this, Home_Activity::class.java)
+            val intent = Intent(this, Login_activity::class.java).apply {
+                putExtra("key", "123")
+            }
             startActivity(intent)
             finish()
         }

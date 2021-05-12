@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/line_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnOne"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/rettangolo_11"
+        android:text="Tools"
+        android:textColor="#151515"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/icons_8_profit_2"
+        app:layout_constraintStart_toStartOf="@+id/btnOne"
+        app:layout_constraintTop_toBottomOf="@+id/btnOne" />
+
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textColor="#454545"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+        app:layout_constraintStart_toStartOf="@+id/textView40"
+        app:layout_constraintTop_toTopOf="@+id/imageView24"
+        app:layout_constraintVertical_bias="1.0"
+       android:text="Webinar" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/icons_8_swap"
+        app:layout_constraintStart_toStartOf="@+id/imageView22"
+        app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textColor="#454545"
+        android:textSize="15sp"
+
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
+        app:layout_constraintStart_toStartOf="@+id/textView39"
+        app:layout_constraintTop_toTopOf="@+id/imageView23"
+        android:text="Currency Exchange" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/icons_8_rent"
+        app:layout_constraintStart_toStartOf="@+id/imageView24"
+        app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textColor="#454545"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+        app:layout_constraintStart_toStartOf="@+id/textView41"
+        app:layout_constraintTop_toTopOf="@+id/imageView36"
+        app:layout_constraintVertical_bias="1.0"
+        android:text="Best Broker" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/icons_8_video_call"
+        app:layout_constraintStart_toStartOf="@+id/imageView23"
+        app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:fontFamily="monospace"
+        android:textColor="#454545"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+        app:layout_constraintStart_toEndOf="@+id/imageView22"
+        app:layout_constraintTop_toTopOf="@+id/imageView22"
+        android:text="Select Stocks" />
+</androidx.constraintlayout.widget.ConstraintLayout>

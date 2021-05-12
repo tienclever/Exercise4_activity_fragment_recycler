@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -18,6 +19,34 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="38dp"
+                android:layout_height="9dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bo_hong_rec"
+                app:layout_constraintStart_toEndOf="@+id/imageView25"
+                app:layout_constraintTop_toTopOf="@+id/imageView25" />
+
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="61dp"
+                android:background="@drawable/bo_vien_hong"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bo_vien_hong"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView21"
+                app:layout_constraintStart_toEndOf="@+id/imageView21"
+                app:layout_constraintTop_toTopOf="@+id/imageView21"
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -75,9 +104,11 @@
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="52dp"
-                android:background="@drawable/ic_gruppo_di_maschere_3"
+                android:src="@drawable/ic_gruppo_di_maschere_3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />

@@ -29,5 +29,8 @@ class Onboarding3 : Fragment() {
             (activity as OnboardingActivity).onClickPop()
         }
 
+        textView13.setOnClickListener {
+            (activity as OnboardingActivity).skip()
+        }
     }
 }

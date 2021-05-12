@@ -20,7 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/et1"
+        android:id="@+id/etLogin1"
         android:layout_width="249dp"
         android:layout_height="51dp"
         android:layout_marginTop="23dp"
@@ -34,8 +34,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <EditText
-        android:id="@+id/et2"
+
+        <EditText
+        android:id="@+id/etLogin2"
         android:layout_width="249dp"
         android:layout_height="51dp"
         android:layout_marginTop="16dp"
@@ -45,10 +46,11 @@
         android:paddingLeft="23dp"
         android:textColorHint="#9d9d9d"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/et1"
+        app:layout_constraintEnd_toEndOf="@+id/etLogin1"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/et1"
-        app:layout_constraintTop_toBottomOf="@+id/et1" />
+        app:layout_constraintStart_toStartOf="@+id/etLogin1"
+        app:layout_constraintTop_toBottomOf="@+id/etLogin1" />
+
 
     <Button
         android:id="@+id/btn_login"
@@ -59,12 +61,12 @@
         android:text="LOGIN"
         android:textColor="#ffffff"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/et2"
-        app:layout_constraintStart_toStartOf="@+id/et2"
-        app:layout_constraintTop_toBottomOf="@+id/et2" />
+        app:layout_constraintEnd_toEndOf="@+id/etLogin2"
+        app:layout_constraintStart_toStartOf="@+id/etLogin2"
+        app:layout_constraintTop_toBottomOf="@+id/etLogin2" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/forgot_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
@@ -87,6 +89,6 @@
         android:textColor="#9d9d9d"
         android:textSize="14sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toEndOf="@+id/textView8" />
+        app:layout_constraintBottom_toBottomOf="@+id/forgot_login"
+        app:layout_constraintStart_toEndOf="@+id/forgot_login" />
 </androidx.constraintlayout.widget.ConstraintLayout>

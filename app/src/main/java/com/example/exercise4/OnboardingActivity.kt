@@ -48,6 +48,7 @@ class OnboardingActivity : AppCompatActivity() {
     internal fun start_Login() {
         val intent = Intent(this, Login_activity::class.java)
         startActivity(intent)
+//        finishAffinity()
     }
 
     fun onClickPop() {
@@ -77,5 +78,11 @@ class OnboardingActivity : AppCompatActivity() {
         }else{
             super.onBackPressed()
         }
+    }
+
+    fun skip(){
+        val intent = Intent(this, Login_activity::class.java)
+        startActivity(intent)
+//        finishAffinity()
     }
 }

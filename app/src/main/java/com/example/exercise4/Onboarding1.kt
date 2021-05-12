@@ -27,6 +27,10 @@ class Onboarding1 : Fragment() {
         btn_onboarding_1.setOnClickListener {
             (activity as OnboardingActivity).init_two_fragment()
         }
+
+        textView3.setOnClickListener {
+            (activity as OnboardingActivity).skip()
+        }
     }
 
 }
