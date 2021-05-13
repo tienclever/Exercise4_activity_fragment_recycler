@@ -20,6 +20,5 @@ class NewFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         (activity as Home_Activity).initFrangmentRecyclerNew()
-
     }
 }

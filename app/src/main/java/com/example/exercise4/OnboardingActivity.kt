@@ -23,6 +23,7 @@ class OnboardingActivity : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.container_body, firstFragment)
+        fragmentTransaction.addToBackStack("one - ${count++}")
     }
 
     internal fun init_two_fragment() {
@@ -48,7 +49,6 @@ class OnboardingActivity : AppCompatActivity() {
     internal fun start_Login() {
         val intent = Intent(this, Login_activity::class.java)
         startActivity(intent)
-//        finishAffinity()
     }
 
     fun onClickPop() {
@@ -62,7 +62,7 @@ class OnboardingActivity : AppCompatActivity() {
         builder.setTitle("Thoát app")
         builder.setMessage("bạn có muốn thóat")
         builder.setPositiveButton("OK",DialogInterface.OnClickListener { dialog, which ->
-          super.onBackPressed()
+            finish()
         })
         builder.setNegativeButton("No", DialogInterface.OnClickListener { dialog, which ->
             dialog.dismiss()
@@ -73,6 +73,7 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        count--
         if (count == 0) {
             showDialog()
         }else{
@@ -83,6 +84,6 @@ class OnboardingActivity : AppCompatActivity() {
     fun skip(){
         val intent = Intent(this, Login_activity::class.java)
         startActivity(intent)
-//        finishAffinity()
+        finishAffinity()
     }
 }
