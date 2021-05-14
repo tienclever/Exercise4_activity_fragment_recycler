@@ -99,8 +99,7 @@ class Home_Activity : AppCompatActivity() {
 
     private fun init_one_fragment() {
         val oneFragment = TraDixFragment()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
 //        fragmentTransaction.addToBackStack("add1 ${number++}")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_layout, oneFragment)
@@ -108,8 +107,7 @@ class Home_Activity : AppCompatActivity() {
 
     private fun init_two_fragment() {
         val twoFragment = CoinFragment()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
 //        fragmentTransaction.addToBackStack("add2 ${number++}")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_layout, twoFragment)
@@ -117,8 +115,7 @@ class Home_Activity : AppCompatActivity() {
 
     private fun init_three_fragment() {
         val threeFragment = NewFragment()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
 //        fragmentTransaction.addToBackStack("add3 ${number++}")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_layout, threeFragment)
@@ -126,22 +123,22 @@ class Home_Activity : AppCompatActivity() {
 
     private fun init_four_fragment() {
         val fourtFragment = MenuFragment()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
 //        fragmentTransaction.addToBackStack("add4 ${number++}")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_layout, fourtFragment)
     }
 
     fun DeleteFragment() {
-        val fragmentManager = supportFragmentManager
-        fragmentManager.popBackStack()
+        supportFragmentManager.popBackStack()
     }
 
     override fun onBackPressed() {
-//        finish()
-//        var buttonDrawable2: Drawable? = btnNew.background
-//        buttonDrawable2?.setTint(Color.BLACK)
+        number--
+        if (number == -1){
+            var buttonDrawable2: Drawable? = btnNew.background
+            buttonDrawable2?.setTint(Color.BLACK)
+        }
         var buttonDrawable3: Drawable? = btnCustomer.background
         buttonDrawable3?.setTint(Color.BLACK)
         super.onBackPressed()
@@ -149,22 +146,19 @@ class Home_Activity : AppCompatActivity() {
 
     internal fun init() {
         val oneFragment = Recycler_Fragment()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_test, oneFragment)
     }
 
     internal fun init2() {
         val oneFragment = Fragment_Shares()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_test, oneFragment)
     }
 
     internal fun background() {
-//        constraintLayout2.setBackgroundColor(Color.BLUE)
         changColor()
     }
 
@@ -185,6 +179,7 @@ class Home_Activity : AppCompatActivity() {
         fragmentTransition.replace(R.id.frame_layout, frangmentDetail)
         fragmentTransition.addToBackStack("add4")
         fragmentTransition.commit()
+        number++
     }
 
     fun changColor(){

@@ -19,8 +19,7 @@ class Login_activity : AppCompatActivity() {
 
     internal fun initFragment() {
         firstFragment = Login_Fragment()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.container_login, firstFragment)
     }
@@ -34,8 +33,7 @@ class Login_activity : AppCompatActivity() {
                     }
                 }
             })
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.addToBackStack("ok")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.container_login, secondFragment)
