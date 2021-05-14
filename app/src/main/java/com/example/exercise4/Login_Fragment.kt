@@ -7,12 +7,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.layout_login_fragment.*
-import kotlinx.android.synthetic.main.layout_signup_fragment.*
 
 class Login_Fragment : Fragment() {
 
-    var bien1 :String =""
-    var bien2 :String =""
+    var bien1: String = ""
+    var bien2: String = ""
     var x = 1
 
     override fun onCreateView(
@@ -32,26 +31,36 @@ class Login_Fragment : Fragment() {
         }
 
         btn_login.setOnClickListener {
-            if (etLogin1.text.toString().isEmpty() || etLogin2.text.toString().isEmpty()){
-                Toast.makeText(this.context, "bạn nhập thiếu thông tin!!", Toast.LENGTH_LONG).show()
+            if (bien1.isEmpty() || bien2.isEmpty()){
+                Toast.makeText(this.context, "bạn chưa đăng kí!!", Toast.LENGTH_LONG).show()
             }else{
-
-                (activity as Login_activity).start_Home()
+                if (etLogin1.text.toString().isEmpty() || etLogin2.text.toString().isEmpty()) {
+                    Toast.makeText(this.context, "bạn nhập thiếu thông tin!!", Toast.LENGTH_LONG).show()
+                } else if (etLogin1.text.toString() != bien1 || etLogin2.text.toString() != bien2){
+                    Toast.makeText(this.context, "bạn nhập sai thông tin!!", Toast.LENGTH_LONG).show()
+                }else{
+                    (activity as Login_activity).start_Home()
+                }
             }
+//            when(etLogin1.text.toString().isEmpty() || etLogin2.text.toString().isEmpty()){
+//                true -> Toast.makeText(this.context, "bạn nhập thiếu thông tin!!", Toast.LENGTH_LONG).show()
+//                else -> (activity as Login_activity).start_Home()
+//            }
         }
 
         forgot_login.setOnClickListener {
             (activity as Login_activity).start_Email()
-            x=0
+            x = 0
+            bien2 = "123"
         }
 
     }
 
     override fun onResume() {
-        if (x== 1){
+        if (x == 1) {
             etLogin1.setText(bien1)
             etLogin2.setText(bien2)
-        }else{
+        } else {
             etLogin1.setText(bien1)
             etLogin2.setText("123")
         }

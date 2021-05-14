@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.DrawableCompat
 import kotlinx.android.synthetic.main.activity_home_.*
+import java.util.*
 
 
 class Home_Activity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class Home_Activity : AppCompatActivity() {
 
         init_one_fragment()
         btnIncrease.setBackgroundResource(R.drawable.increase)
-        imageView11.visibility = View.VISIBLE;
+        imageView11.visibility = View.VISIBLE
 
         btnIncrease.setOnClickListener {
             init_one_fragment()
@@ -64,7 +65,7 @@ class Home_Activity : AppCompatActivity() {
             //setTint
             var buttonDrawable1: Drawable? = btnNew.background
             buttonDrawable1 = DrawableCompat.wrap(buttonDrawable1!!)
-            DrawableCompat.setTint(buttonDrawable1, Color.WHITE);
+            DrawableCompat.setTint(buttonDrawable1, Color.WHITE)
             btnNew.background = buttonDrawable1
 
             var buttonDrawable3: Drawable? = btnCustomer.background
@@ -89,7 +90,7 @@ class Home_Activity : AppCompatActivity() {
 
             var buttonDrawable3: Drawable? = btnCustomer.background
             buttonDrawable3 = DrawableCompat.wrap(buttonDrawable3!!)
-            DrawableCompat.setTint(buttonDrawable3, Color.WHITE);
+            DrawableCompat.setTint(buttonDrawable3, Color.WHITE)
             btnCustomer.background = buttonDrawable3
 
             imageView14.visibility = View.VISIBLE
@@ -163,7 +164,8 @@ class Home_Activity : AppCompatActivity() {
     }
 
     internal fun background() {
-        constraintLayout2.setBackgroundColor(Color.BLUE)
+//        constraintLayout2.setBackgroundColor(Color.BLUE)
+        changColor()
     }
 
     internal fun background2() {
@@ -185,4 +187,9 @@ class Home_Activity : AppCompatActivity() {
         fragmentTransition.commit()
     }
 
+    fun changColor(){
+        val rnd = Random()
+        val color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+        constraintLayout2.setBackgroundColor(color)
+    }
 }
