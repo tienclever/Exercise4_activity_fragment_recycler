@@ -18,7 +18,7 @@ class Recycler_Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.layout_recycler_fragment,container,false)
+        return inflater.inflate(R.layout.layout_recycler_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -40,10 +40,16 @@ class Recycler_Fragment : Fragment() {
         recycleview.layoutManager = LinearLayoutManager(this.context)
 
         btnLoadMore.setOnClickListener {
-            listTest.add(Index(1, "DOWN JONES", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
-            listTest.add(Index(1, "FISE100", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
-            listTest.add(Index(1, "IBEX35", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
-            listTest.add(Index(8, "DAX", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(11, "DOWN JONES", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(12, "FISE100", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(13, "IBEX35", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(14, "DAX", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(15, "IBAX35", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(16, "DAX", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(17, "DOWN JONES", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(18, "FISE100", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(19, "IBEX35", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+            listTest.add(Index(20, "DAX", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
             adapter.notifyDataSetChanged()
         }
 

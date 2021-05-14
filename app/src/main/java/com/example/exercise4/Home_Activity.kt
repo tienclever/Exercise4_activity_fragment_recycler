@@ -7,9 +7,10 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.DrawableCompat
 import kotlinx.android.synthetic.main.activity_home_.*
+import java.util.*
 
 
-class Home_Activity : AppCompatActivity(){
+class Home_Activity : AppCompatActivity() {
 
     var number = 0
 
@@ -19,7 +20,7 @@ class Home_Activity : AppCompatActivity(){
 
         init_one_fragment()
         btnIncrease.setBackgroundResource(R.drawable.increase)
-        imageView11.visibility = View.VISIBLE;
+        imageView11.visibility = View.VISIBLE
 
         btnIncrease.setOnClickListener {
             init_one_fragment()
@@ -64,7 +65,7 @@ class Home_Activity : AppCompatActivity(){
             //setTint
             var buttonDrawable1: Drawable? = btnNew.background
             buttonDrawable1 = DrawableCompat.wrap(buttonDrawable1!!)
-            DrawableCompat.setTint(buttonDrawable1, Color.WHITE);
+            DrawableCompat.setTint(buttonDrawable1, Color.WHITE)
             btnNew.background = buttonDrawable1
 
             var buttonDrawable3: Drawable? = btnCustomer.background
@@ -89,7 +90,7 @@ class Home_Activity : AppCompatActivity(){
 
             var buttonDrawable3: Drawable? = btnCustomer.background
             buttonDrawable3 = DrawableCompat.wrap(buttonDrawable3!!)
-            DrawableCompat.setTint(buttonDrawable3, Color.WHITE);
+            DrawableCompat.setTint(buttonDrawable3, Color.WHITE)
             btnCustomer.background = buttonDrawable3
 
             imageView14.visibility = View.VISIBLE
@@ -100,41 +101,49 @@ class Home_Activity : AppCompatActivity(){
         val oneFragment = TraDixFragment()
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.addToBackStack("add1 ${number++}")
+//        fragmentTransaction.addToBackStack("add1 ${number++}")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_layout, oneFragment)
     }
+
     private fun init_two_fragment() {
         val twoFragment = CoinFragment()
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.addToBackStack("add2 ${number++}")
+//        fragmentTransaction.addToBackStack("add2 ${number++}")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_layout, twoFragment)
     }
+
     private fun init_three_fragment() {
         val threeFragment = NewFragment()
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.addToBackStack("add3 ${number++}")
+//        fragmentTransaction.addToBackStack("add3 ${number++}")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_layout, threeFragment)
     }
+
     private fun init_four_fragment() {
         val fourtFragment = MenuFragment()
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.addToBackStack("add4 ${number++}")
+//        fragmentTransaction.addToBackStack("add4 ${number++}")
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_layout, fourtFragment)
     }
-    fun Delete(){
+
+    fun DeleteFragment() {
         val fragmentManager = supportFragmentManager
         fragmentManager.popBackStack()
     }
 
     override fun onBackPressed() {
-        finish()
+//        finish()
+//        var buttonDrawable2: Drawable? = btnNew.background
+//        buttonDrawable2?.setTint(Color.BLACK)
+        var buttonDrawable3: Drawable? = btnCustomer.background
+        buttonDrawable3?.setTint(Color.BLACK)
         super.onBackPressed()
     }
 
@@ -145,6 +154,7 @@ class Home_Activity : AppCompatActivity(){
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.frame_test, oneFragment)
     }
+
     internal fun init2() {
         val oneFragment = Fragment_Shares()
         val fragmentManager = supportFragmentManager
@@ -153,19 +163,33 @@ class Home_Activity : AppCompatActivity(){
         fragmentTransaction.replace(R.id.frame_test, oneFragment)
     }
 
-    internal fun background(){
-        constraintLayout2.setBackgroundColor(Color.BLUE)
+    internal fun background() {
+//        constraintLayout2.setBackgroundColor(Color.BLUE)
+        changColor()
     }
 
-    internal fun background2(){
+    internal fun background2() {
         constraintLayout2.setBackgroundColor(Color.WHITE)
     }
 
-    internal fun initFrangmentRecyclerNew(){
+    internal fun initFrangmentRecyclerNew() {
         val frangmentRecycler = Frangment_Recycleview_New()
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(R.id.contener_news, frangmentRecycler)
         fragmentTransition.commit()
     }
 
+    internal fun initTest() {
+        val frangmentDetail = Fragment_Detail()
+        val fragmentTransition = supportFragmentManager.beginTransaction()
+        fragmentTransition.replace(R.id.frame_layout, frangmentDetail)
+        fragmentTransition.addToBackStack("add4")
+        fragmentTransition.commit()
+    }
+
+    fun changColor(){
+        val rnd = Random()
+        val color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+        constraintLayout2.setBackgroundColor(color)
+    }
 }

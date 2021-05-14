@@ -29,5 +29,10 @@ class Frangment_Recycleview_New : Fragment() {
         var adapter = Adapter_news(list)
         rv_news.adapter = adapter
         rv_news.layoutManager = LinearLayoutManager(this.context)
+
+        imageDetail.setOnClickListener {
+            (activity as Home_Activity).initTest()
+        }
     }
+
 }
