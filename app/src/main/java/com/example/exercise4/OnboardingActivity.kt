@@ -19,8 +19,7 @@ class OnboardingActivity : AppCompatActivity() {
     private fun init_one_fragment() {
 
         val firstFragment = Onboarding1()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.commit()
         fragmentTransaction.replace(R.id.container_body, firstFragment)
         fragmentTransaction.addToBackStack("one - ${count++}")
@@ -29,8 +28,7 @@ class OnboardingActivity : AppCompatActivity() {
     internal fun init_two_fragment() {
 
         val twoFrag = Onboarding2()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.commit()
         fragmentTransaction.addToBackStack("two - ${count++}")
         fragmentTransaction.replace(R.id.container_body, twoFrag)
@@ -39,8 +37,7 @@ class OnboardingActivity : AppCompatActivity() {
     internal fun init_three_fragment() {
 
         val twoFrag = Onboarding3()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.commit()
         fragmentTransaction.addToBackStack("three - ${count++}")
         fragmentTransaction.replace(R.id.container_body, twoFrag)
